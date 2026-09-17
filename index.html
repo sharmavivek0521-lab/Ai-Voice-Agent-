@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIRBHAY — Voice AI Agent</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div class="brand">NIRBHAY</div>
+      <div class="status" id="status">Ready</div>
+      <h1>Voice AI Agent</h1>
+      <p>Listen → Think → Speak</p>
+    </section>
+
+    <section class="card">
+      <div id="orb" class="orb">
+        <span class="orb-core"></span>
+      </div>
+
+      <div class="controls">
+        <button id="talkBtn" class="talk">🎙️ Tap to Talk</button>
+        <button id="stopBtn" class="secondary">Stop</button>
+      </div>
+
+      <label class="row">
+        <span>Language</span>
+        <select id="lang">
+          <option value="en-US">English</option>
+          <option value="hi-IN">Hindi</option>
+          <option value="en-IN">English (India)</option>
+        </select>
+      </label>
+
+      <div class="live">
+        <div class="label">You said</div>
+        <div id="transcript" class="transcript">—</div>
+      </div>
+
+      <div class="live">
+        <div class="label">NIRBHAY</div>
+        <div id="reply" class="reply">Ready when you are.</div>
+      </div>
+    </section>
+
+    <section class="card small">
+      <div class="label">Architecture</div>
+      <div class="pipeline">
+        <span>🎙️ STT</span><span>→</span><span>🧠 Gemini</span><span>→</span><span>🔊 TTS</span>
+      </div>
+      <p class="note">This starter uses your browser's speech APIs for microphone recognition and playback.</p>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
